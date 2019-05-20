@@ -6,8 +6,12 @@ class Expence(models.Model):
     date=models.DateField()
     amount=models.BigIntegerField()
     # user=models.ForeignKey(User)
+    def __str__(self):
+        return "{}-{}".format(self.date,self.amount) 
 
 class Income(models.Model):
     text=models.CharField(max_length=20)
     date=models.DateField()
     amount=models.BigIntegerField()
+    def __str__(self):
+       return "{}-{}".format(self.date,self.amount) 
